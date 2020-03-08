@@ -1,0 +1,6 @@
+.browser-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: calc(50vh - 170px);
+}

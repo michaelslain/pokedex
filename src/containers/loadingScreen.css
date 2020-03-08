@@ -1,0 +1,47 @@
+.loading-msg {
+	font-family: 'Oxanium', cursive;
+	text-align: center;
+	font-size: 50px;
+	line-height: calc(100vh - 60px);
+	animation: appear 1s;
+}
+
+.dot {
+	font-size: 60px;
+	display: inline-block;
+}
+
+.dot.one {
+	animation: lift 1s 0s infinite alternate;
+	color: gold;
+}
+
+.dot.two {
+	animation: lift 1s 0.5s infinite alternate;
+	color: red;
+}
+
+.dot.three {
+	animation: lift 1s 1s infinite alternate;
+	color: blue;
+}
+
+@keyframes lift {
+	0%,
+	75% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-30px);
+	}
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

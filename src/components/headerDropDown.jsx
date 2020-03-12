@@ -1,17 +1,22 @@
 import * as React from 'react';
 import pokemon from 'pokemon';
-import Recommend from './recommend';
-import './dropDown.css';
+import HeaderRecommend from './headerRecommend';
+import './headerDropDown.css';
 
-export default function DropDown({ value, onChangeQuery, input }) {
-	const [display, setDisplay] = React.useState({ display: 'none' });
+export default function HeaderDropDown({ value, onChangeQuery, bar, input }) {
+	const [style, setStyle] = React.useState({ display: 'none' });
 	const [autoFills, setAutoFills] = React.useState([]);
 
 	React.useEffect(() => {
 		if (value === '') {
-			setDisplay({ display: 'none' });
+			setStyle({ display: 'none' });
 		} else {
-			setDisplay({ display: 'block' });
+			const rect = bar.current.getBoundingClientRect();
+
+			setStyle({
+				display: 'block',
+				left: rect.left + 'px'
+			});
 
 			handleCreateAutoFills();
 		}
@@ -28,10 +33,10 @@ export default function DropDown({ value, onChangeQuery, input }) {
 	}
 
 	return (
-		<div className="drop-down" style={display}>
+		<div className="header-drop-down" style={style}>
 			{autoFills.map((a, i) => {
 				return (
-					<Recommend
+					<HeaderRecommend
 						key={i}
 						text={a.toLowerCase()}
 						onChangeQuery={onChangeQuery}

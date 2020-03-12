@@ -1,0 +1,20 @@
+.info-container {
+	flex: 1;
+}
+
+.num,
+.name {
+	display: inline-block;
+}
+
+.num {
+	color: #002a3d;
+}
+
+.name {
+	margin-left: 20px;
+}
+
+.type-gallery {
+	display: flex;
+}

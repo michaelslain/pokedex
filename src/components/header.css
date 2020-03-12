@@ -1,0 +1,12 @@
+.header {
+	height: 8vh;
+	background: lightgrey;
+	display: flex;
+	align-items: center;
+}
+
+.header-logo {
+	height: 40px;
+	margin-left: 10vw;
+	cursor: pointer;
+}

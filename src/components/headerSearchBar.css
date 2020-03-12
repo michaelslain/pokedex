@@ -1,0 +1,26 @@
+.header-search-bar {
+	background: #ffffff;
+	height: 30px;
+	width: 400px;
+	border: lightgrey 1px solid;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-left: 3vw;
+}
+
+.header-search-icon {
+	height: 15px;
+	display: block;
+}
+
+.header-search-input {
+	outline: none;
+	display: block;
+	font-size: 15px;
+	width: 350px;
+}
+
+.header-search-bar:hover {
+	box-shadow: 0 2px 2px lightgrey;
+}

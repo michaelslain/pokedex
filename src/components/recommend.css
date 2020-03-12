@@ -1,0 +1,15 @@
+.recommendation {
+	font-weight: bold;
+	padding: 5px;
+	padding-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.recommendation:nth-child(1) {
+	padding-top: 15px;
+}
+
+.recommendation:hover {
+	background: lightgrey;
+}

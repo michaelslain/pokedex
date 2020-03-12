@@ -1,0 +1,15 @@
+.header-recommendation {
+	font-weight: bold;
+	padding: 3px;
+	padding-left: 15px;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.header-recommendation:nth-child(1) {
+	padding-top: 15px;
+}
+
+.header-recommendation:hover {
+	background: lightgrey;
+}

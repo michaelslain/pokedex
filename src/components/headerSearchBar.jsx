@@ -1,11 +1,12 @@
 import * as React from 'react';
 import SearchIcon from '../images/search.svg';
-import DropDown from './dropDown';
-import './searchBar.css';
+import HeaderDropDown from './headerDropDown';
+import './headerSearchBar.css';
 
-export default function SearchBar() {
+export default function HeaderSearchBar() {
 	const [query, setQuery] = React.useState('');
 	const [borderRadius, setBorderRadius] = React.useState({ borderRadius: 50 });
+	const searchBar = React.useRef(null);
 	const searchInput = React.useRef(null);
 
 	React.useEffect(() => {
@@ -18,14 +19,14 @@ export default function SearchBar() {
 
 	return (
 		<>
-			<div className="search-bar" style={borderRadius}>
-				<img src={SearchIcon} alt="Q" className="search-icon" />
+			<div ref={searchBar} className="header-search-bar" style={borderRadius}>
+				<img src={SearchIcon} alt="Q" className="header-search-icon" />
 				<input
 					ref={searchInput}
 					type="text"
-					className="search-input"
+					className="header-search-input"
 					value={query}
-					onChange={e => setQuery(e.target.value.toLowerCase())}
+					onChange={e => setQuery(e.target.value)}
 					onKeyPress={e => {
 						const { keyCode, which, target } = e;
 
@@ -38,7 +39,12 @@ export default function SearchBar() {
 					}}
 				/>
 			</div>
-			<DropDown value={query} onChangeQuery={setQuery} input={searchInput} />
+			<HeaderDropDown
+				value={query}
+				onChangeQuery={setQuery}
+				bar={searchBar}
+				input={searchInput}
+			/>
 		</>
 	);
 }

@@ -1,0 +1,11 @@
+.all-pokemon-link {
+	text-decoration: none;
+	color: grey;
+	margin-top: 20px;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.all-pokemon-link:hover {
+	color: black;
+}

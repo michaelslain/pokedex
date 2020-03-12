@@ -34,7 +34,7 @@ export default function PokemonPage() {
 	}
 
 	function handleOrganizeData(data) {
-		const { species, sprites, id, weight, types } = data;
+		const { species, sprites, id, weight, types, stats } = data;
 
 		const newObj = {
 			name: species.name.charAt(0).toUpperCase() + species.name.slice(1),
@@ -43,7 +43,19 @@ export default function PokemonPage() {
 			weight: weight,
 			types: types.map(t => {
 				return t.type.name;
-			})
+			}),
+			stats: () => {
+				let obj = {};
+
+				stats.forEach(s => {
+					const value = s.base_stat;
+					const key = s.stat.name.replace(/-/g, '');
+
+					obj[key] = value;
+				});
+
+				return obj;
+			}
 		};
 
 		setInfo(newObj);

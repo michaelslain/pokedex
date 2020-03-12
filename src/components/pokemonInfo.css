@@ -18,3 +18,10 @@
 .type-gallery {
 	display: flex;
 }
+
+.weight {
+	font-size: 15px;
+	font-weight: bold;
+	color: grey;
+	margin-top: 5px;
+}

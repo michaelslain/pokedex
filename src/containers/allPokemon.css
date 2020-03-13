@@ -1,0 +1,16 @@
+.all-pokemon-container {
+	width: 50vw;
+	margin: auto;
+	margin-top: 150px;
+}
+
+.all-pokemon-heading {
+	font-size: 40px;
+	color: rgb(44, 44, 44);
+}
+
+.heading-line {
+	width: inherit;
+	height: 2px;
+	background: grey;
+}

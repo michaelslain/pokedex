@@ -26,7 +26,7 @@ export default function HeaderSearchBar() {
 					type="text"
 					className="header-search-input"
 					value={query}
-					onChange={e => setQuery(e.target.value)}
+					onChange={e => setQuery(e.target.value.toLowerCase())}
 					onKeyPress={e => {
 						const { keyCode, which, target } = e;
 

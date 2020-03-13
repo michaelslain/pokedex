@@ -1718,6 +1718,11 @@ ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+alphabet@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/alphabet/-/alphabet-1.0.0.tgz#0d8f81ca3f78355126d724d145487e1e4ef377c0"
+  integrity sha1-DY+Byj94NVEm1yTRRUh+Hk7zd8A=
+
 alphanum-sort@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"

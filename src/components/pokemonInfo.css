@@ -1,10 +1,12 @@
 .info-container {
-	flex: 1;
+	width: 20vw;
+	justify-self: left;
 }
 
 .num,
 .name {
 	display: inline-block;
+	margin-top: 23vh;
 }
 
 .num {
@@ -16,7 +18,8 @@
 }
 
 .type-gallery {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(9, auto);
 }
 
 .weight {
@@ -24,4 +27,23 @@
 	font-weight: bold;
 	color: grey;
 	margin-top: 5px;
+}
+
+@media only screen and (max-width: 1229px) {
+	.type-gallery {
+		grid-template-columns: repeat(5, auto);
+	}
+}
+
+@media only screen and (max-width: 892px) {
+	.info-container {
+		align-self: center;
+		width: 300px;
+		height: 46vh;
+	}
+
+	.num,
+	.name {
+		margin-top: 0;
+	}
 }

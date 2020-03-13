@@ -3,6 +3,7 @@ import './pokemonPage.css';
 import LoadingPage from './loadingScreen';
 import FakePokemon from './fakePokemon';
 import PokemonInfo from '../components/pokemonInfo';
+import MissingNo from './missingNo';
 import PokemonImage from '../components/pokemonImage';
 import Header from '../components/header';
 import { useParams } from 'react-router-dom';
@@ -40,7 +41,7 @@ export default function PokemonPage() {
 			name: species.name.charAt(0).toUpperCase() + species.name.slice(1),
 			img: sprites.front_default,
 			num: id,
-			weight: weight,
+			weight: weight === 69 ? weight + ' 👍' : weight,
 			types: types.map(t => {
 				return t.type.name;
 			}),
@@ -48,7 +49,7 @@ export default function PokemonPage() {
 				let obj = {};
 
 				stats.forEach(s => {
-					const value = s.base_stat;
+					const value = s.base_stat === 69 ? s.base_stat + ' 👍' : s.base_stat;
 					const key = s.stat.name.replace(/-/g, '');
 
 					obj[key] = value;
@@ -62,6 +63,14 @@ export default function PokemonPage() {
 	}
 
 	if (info === null) return <LoadingPage />;
+
+	if (query === 'missing no') return <MissingNo />;
+
+	if (query === 'missingno') return <MissingNo />;
+
+	if (query === 'missingno.') return <MissingNo />;
+
+	if (query === 'missing no.') return <MissingNo />;
 
 	if (info === 'RIP') return <FakePokemon />;
 

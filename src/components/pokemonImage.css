@@ -1,8 +1,32 @@
 .img-container {
-	flex: 1;
+	width: 50%;
 }
 
 .img {
 	width: 600px;
 	image-rendering: pixelated;
+	float: right;
+	margin-top: 10vh;
+}
+
+@media only screen and (max-width: 1086px) {
+	.img-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+}
+
+@media only screen and (max-width: 892px) {
+	.img-container {
+		width: 100vw;
+		align-self: center;
+		height: 46vh;
+	}
+
+	.img {
+		margin: 0;
+		height: 90%;
+		width: auto;
+	}
 }

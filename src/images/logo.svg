@@ -1,0 +1,48 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 207.28 208.76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f15a24;
+      }
+
+      .cls-2 {
+        fill: #e6e7e8;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        fill: none;
+        stroke: #231f20;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke-width: 11px;
+      }
+
+      .cls-4 {
+        stroke-width: 6px;
+      }
+
+      .cls-5 {
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <title>logo</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g>
+      <g>
+        <path class="cls-1" d="M197.77,99.81v1.9L133.46,101l-2.18-.06a4,4,0,0,0,0-.49A31.83,31.83,0,0,0,67.63,99.3c0,.37,0,.75,0,1.13,0,.2,0,.4,0,.61H66.34l-64.86-.73v-.53a98.14,98.14,0,1,1,196.27-2q0,1,0,2Z" transform="translate(4 4.83)"/>
+        <path class="cls-2" d="M133.44,101l64.31.73A98.13,98.13,0,0,1,1.5,100.34l64.86.73h1.29a31.81,31.81,0,0,0,63.61-.12Z" transform="translate(4 4.83)"/>
+        <path class="cls-2" d="M131.28,100.43a4,4,0,0,1,0,.49,31.81,31.81,0,0,1-63.61.12c0-.21,0-.41,0-.61a31.83,31.83,0,0,1,63.65-1.13c0,.37,0,.75,0,1.13Z" transform="translate(4 4.83)"/>
+      </g>
+      <g>
+        <path class="cls-3" d="M1.5,100.34v-.53a98.14,98.14,0,0,1,196.27-2c0,.66,0,1.33,0,2v1.9A98.13,98.13,0,0,1,1.52,100.34Z" transform="translate(4 4.83)"/>
+        <polyline class="cls-4" points="4.33 105.14 5.5 105.16 70.36 105.89"/>
+        <path class="cls-5" d="M67.65,101c0-.21,0-.41,0-.61A31.83,31.83,0,0,1,131.3,99.3c0,.37,0,.75,0,1.13a4,4,0,0,1,0,.49,31.81,31.81,0,0,1-63.61.12Z" transform="translate(4 4.83)"/>
+        <polyline class="cls-4" points="137.46 105.8 201.76 106.52 203.49 106.54"/>
+      </g>
+    </g>
+  </g>
+</svg>

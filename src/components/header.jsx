@@ -1,6 +1,7 @@
 import * as React from 'react';
 import HeaderSearchBar from './headerSearchBar';
 import TitleImage from '../images/title.svg';
+import Logo from '../images/logo.svg';
 import './header.css';
 
 export default function Header() {
@@ -10,13 +11,21 @@ export default function Header() {
 
 	return (
 		<div className="header">
-			<img
-				src={TitleImage}
-				alt="Pokédex"
-				className="header-logo"
-				onClick={handleGoHome}
-			/>
-			<HeaderSearchBar />
+			<div className="header-container">
+				<img
+					src={TitleImage}
+					alt="Pokédex"
+					className="header-logo"
+					onClick={handleGoHome}
+				/>
+				<img
+					src={Logo}
+					alt="Pokédex"
+					className="header-mini-logo"
+					onClick={handleGoHome}
+				/>
+				<HeaderSearchBar />
+			</div>
 		</div>
 	);
 }

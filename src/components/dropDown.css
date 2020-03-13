@@ -6,3 +6,9 @@
 	max-height: 30vh;
 	overflow: scroll;
 }
+
+@media only screen and (max-width: 768px) {
+	.drop-down {
+		width: 90%;
+	}
+}

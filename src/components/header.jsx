@@ -3,27 +3,18 @@ import HeaderSearchBar from './headerSearchBar';
 import TitleImage from '../images/title.svg';
 import Logo from '../images/logo.svg';
 import './header.css';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
-	function handleGoHome() {
-		window.location.href = 'http://localhost:3000/';
-	}
-
 	return (
 		<div className="header">
 			<div className="header-container">
-				<img
-					src={TitleImage}
-					alt="Pokédex"
-					className="header-logo"
-					onClick={handleGoHome}
-				/>
-				<img
-					src={Logo}
-					alt="Pokédex"
-					className="header-mini-logo"
-					onClick={handleGoHome}
-				/>
+				<Link to="/">
+					<img src={TitleImage} alt="Pokédex" className="header-logo" />
+				</Link>
+				<Link to="/">
+					<img src={Logo} alt="Pokédex" className="header-mini-logo" />
+				</Link>
 				<HeaderSearchBar />
 			</div>
 		</div>

@@ -4,7 +4,6 @@ import Stats from './stats';
 import './pokemonInfo.css';
 
 export default function PokemonInfo({ info }) {
-	console.log(info);
 	return (
 		<div className="info-container">
 			<h1 className="num">{info.num + '.'}</h1>

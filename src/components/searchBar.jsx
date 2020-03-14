@@ -2,11 +2,13 @@ import * as React from 'react';
 import SearchIcon from '../images/search.svg';
 import DropDown from './dropDown';
 import './searchBar.css';
+import { useHistory } from 'react-router-dom';
 
 export default function SearchBar() {
 	const [query, setQuery] = React.useState('');
 	const [borderRadius, setBorderRadius] = React.useState({ borderRadius: 50 });
 	const searchInput = React.useRef(null);
+	const history = useHistory();
 
 	React.useEffect(() => {
 		if (query === '') {
@@ -15,6 +17,16 @@ export default function SearchBar() {
 			setBorderRadius({ borderRadius: '20px 20px 0 0' });
 		}
 	}, [query]);
+
+	function handleRoute(e) {
+		const { keyCode, which, target } = e;
+
+		const code = keyCode || which;
+
+		if (code === 13 /* enter key */) {
+			history.push('/pokemon/' + target.value);
+		}
+	}
 
 	return (
 		<>
@@ -26,16 +38,7 @@ export default function SearchBar() {
 					className="search-input"
 					value={query}
 					onChange={e => setQuery(e.target.value.toLowerCase())}
-					onKeyPress={e => {
-						const { keyCode, which, target } = e;
-
-						const code = keyCode || which;
-
-						if (code === 13 /* enter key */) {
-							window.location.href =
-								'http://localhost:3000/pokemon/' + target.value;
-						}
-					}}
+					onKeyPress={handleRoute}
 				/>
 			</div>
 			<DropDown value={query} onChangeQuery={setQuery} input={searchInput} />

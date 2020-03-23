@@ -24,3 +24,13 @@
 .header-search-bar:hover {
 	box-shadow: 0 2px 2px lightgrey;
 }
+
+@media only screen and (max-width: 500px) {
+	.header-search-bar {
+		width: 60vw;
+	}
+
+	.header-search-input {
+		width: 50vw;
+	}
+}

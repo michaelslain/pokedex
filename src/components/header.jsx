@@ -5,7 +5,7 @@ import Logo from '../images/logo.svg';
 import './header.css';
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({ onReload }) {
 	return (
 		<div className="header">
 			<div className="header-container">
@@ -15,7 +15,7 @@ export default function Header() {
 				<Link to="/">
 					<img src={Logo} alt="Pokédex" className="header-mini-logo" />
 				</Link>
-				<HeaderSearchBar />
+				<HeaderSearchBar onReload={onReload} />
 			</div>
 		</div>
 	);

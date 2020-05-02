@@ -8,7 +8,7 @@ import PokemonImage from '../components/pokemonImage';
 import Header from '../components/header';
 import { useParams } from 'react-router-dom';
 
-export default function PokemonPage() {
+export default function PokemonPage({ onReload }) {
 	const [info, setInfo] = React.useState(null);
 	const { query } = useParams();
 
@@ -18,14 +18,14 @@ export default function PokemonPage() {
 
 	async function handleFetchInfo() {
 		fetch('https://pokeapi.co/api/v2/pokemon/' + query)
-			.then(res => {
+			.then((res) => {
 				if (res.status === 200) {
 					return res.json();
 				} else {
 					return 'RIP';
 				}
 			})
-			.then(data => {
+			.then((data) => {
 				if (data === 'RIP') {
 					setInfo(data);
 				} else {
@@ -42,13 +42,13 @@ export default function PokemonPage() {
 			img: sprites.front_default,
 			num: id,
 			weight: weight === 69 ? weight + ' 👍' : weight,
-			types: types.map(t => {
+			types: types.map((t) => {
 				return t.type.name;
 			}),
 			stats: () => {
 				let obj = {};
 
-				stats.forEach(s => {
+				stats.forEach((s) => {
 					const value = s.base_stat === 69 ? s.base_stat + ' 👍' : s.base_stat;
 					const key = s.stat.name.replace(/-/g, '');
 
@@ -56,7 +56,7 @@ export default function PokemonPage() {
 				});
 
 				return obj;
-			}
+			},
 		};
 
 		setInfo(newObj);
@@ -76,7 +76,7 @@ export default function PokemonPage() {
 
 	return (
 		<>
-			<Header />
+			<Header onReload={onReload} />
 			<div className="overall-info-container">
 				<PokemonImage info={info} />
 				<PokemonInfo info={info} />

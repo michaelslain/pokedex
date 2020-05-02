@@ -4,7 +4,7 @@ import HeaderDropDown from './headerDropDown';
 import './headerSearchBar.css';
 import { useHistory } from 'react-router-dom';
 
-export default function HeaderSearchBar() {
+export default function HeaderSearchBar({ onReload }) {
 	const [query, setQuery] = React.useState('');
 	const [borderRadius, setBorderRadius] = React.useState({ borderRadius: 50 });
 	const searchBar = React.useRef(null);
@@ -26,6 +26,8 @@ export default function HeaderSearchBar() {
 
 		if (code === 13 /* enter key */) {
 			history.push('/pokemon/' + target.value);
+
+			onReload();
 		}
 	}
 
@@ -38,7 +40,7 @@ export default function HeaderSearchBar() {
 					type="text"
 					className="header-search-input"
 					value={query}
-					onChange={e => setQuery(e.target.value.toLowerCase())}
+					onChange={(e) => setQuery(e.target.value.toLowerCase())}
 					onKeyPress={handleRoute}
 				/>
 			</div>
